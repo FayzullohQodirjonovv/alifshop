@@ -1,0 +1,104 @@
+@import "tailwindcss";
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color:#FDC700;
+  border-radius: 10px;
+}
+body{
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+::-webkit-scrollbar-thumb {
+  background-color:white;
+  border-radius: 10px;
+
+}
+::selection {
+  background-color:#FDC700;
+}
+
+.container{
+  width: 80%;
+  margin:  0 auto;
+}
+.mont{
+  padding: 2px 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.slider-container{
+  margin-top: 20px !important;
+}
+.colormany{
+  padding: 6px 10px;
+  font-family: bold;
+}
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1111;
+}
+@media (max-width:1496px){
+  .span{
+    display: none;
+  }
+  .flexdsa{
+    display: none;
+  }
+}
+@media (max-width:1130px){
+  .span1{
+    display: none;
+  }
+.icokko{
+  display: none;
+}
+.container{
+  width: 100%;
+  margin:  0 auto;
+}
+.pereft{
+  display: none;
+}
+.greyn{
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap
+}
+.lern{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+}
+
+@media (max-width:700px){
+  .lern{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mobbile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .colormanie{
+    margin-right: 100px;
+  }
+  .dorrs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .shopsss{
+    display: none;
+  }
+}
