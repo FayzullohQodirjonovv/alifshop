@@ -98,7 +98,16 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .shopsss{
+  .inpr {
+display: none;
+  }
+  .tb1{
     display: none;
   }
+}
+@media (max-width:400px){
+  .nops{
+    margin-left: -50px;
+  }
+ 
 }

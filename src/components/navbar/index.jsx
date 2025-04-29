@@ -11,7 +11,7 @@ function SimpleSlider() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true, 
-        autoplaySpeed: 3000 
+        autoplaySpeed: 5000 
       };
   return (
     <div className="slider-container" style={{ width: '80%', margin: 'auto'}}>
