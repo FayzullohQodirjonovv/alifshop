@@ -1,12 +1,12 @@
 import React from "react";
 import { ShoppingCart, Heart, Menu, Search } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header className="header border-b-4shadow-sm bg-white">
       <div className="container flex items-center justify-between px-6 py-3 ">
         <div className="flex items-center gap-4">
-          <img src="https://alifshop.uz/_ipx/s_113x32/images/alifshop-logo.svg" alt="alif shop" className="h-9 icokko" />
+        <a href="/"><img src="https://alifshop.uz/_ipx/s_113x32/images/alifshop-logo.svg" alt="alif shop" className="h-9 icokko" /></a>  
           <button className="butonsr flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-xl">
             <Menu className="w-5 h-5" />
             <p className="pereft">Tovarlar katalogi</p>
@@ -25,16 +25,20 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className=" shopsss flex items-center gap-4">
-        <div className=" flex flex-col items-center justify-center">
+        <div className="shopsss flex items-center gap-4 relative ">
+        <Link to="/shop" className="relative flex flex-col items-center justify-center cursor-pointer">
   <ShoppingCart className="w-5 h-5" />
   <p>Savat</p>
-</div>
+  <span className="absolute top-0 right-1 mt-[-8px] bg-red-500 text-white p-2 rounded-full w-4 h-4 flex items-center justify-center text-xs">
+  0
+</span>
+</Link>
 
-<div className="flex flex-col items-center justify-center">
-  <Heart className="w-5 h-5 " />
+<Link to="/like" className="relative flex flex-col items-center justify-center cursor-pointer">
+  <Heart className="w-5 h-5" />
   <p>Saralanganlar</p>
-</div>
+</Link>
+
 <div className="flexdsa flex gap-3 items-center">
           <button className="border px-4 py-2 rounded border-amber-400 border-2 ">Kirish</button>
           <div>

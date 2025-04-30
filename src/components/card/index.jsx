@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from "lucide-react";
+import { useCart } from "../../pages/CartContext/index";
 
 const Card = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); 
+
+  const { onAddToCart } = useCart();
 
   useEffect(() => {
     fetch("https://6810cb0527f2fdac2412cf31.mockapi.io/alifshop")
@@ -20,7 +23,7 @@ const Card = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen ">
         <div className="spinner-border animate-spin w-16 h-16 border-4 border-t-4 border-blue-500 rounded-full"></div>
       </div>
     );
@@ -46,7 +49,10 @@ const Card = () => {
               <h3 className="mont text-sm font-semibold bg-[#FFEDC2] rounded-3xl">{product.mokia}</h3>
               <p className="text-gray-400 text-sm line-through">{product.eski_narx}</p>
               <p className="text-lg font-bold text-[#FF5757] mb-[10px]">{product.price}</p>
-              <button className="colormany bg-[#FFBE1F] rounded-[10px] flex items-center justify-center gap-2 px-4 py-2">
+              <button
+                onClick={() => onAddToCart(product)}
+                className="bg-[#FFBE1F] rounded-[10px] flex items-center justify-center gap-2 px-4 py-2"
+              >
                 <ShoppingCart className="w-5 h-5" />
                 В корзину
               </button>
